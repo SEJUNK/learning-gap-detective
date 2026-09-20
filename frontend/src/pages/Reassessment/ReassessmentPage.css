@@ -1,0 +1,156 @@
+.reassessment-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 760px;
+  margin: 0 auto;
+  min-width: 0;
+}
+
+/* Intro */
+
+.reassessment-intro-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.reassessment-intro-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  font-size: var(--font-size-sm);
+}
+
+.reassessment-intro-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.reassessment-intro-value {
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-align: right;
+}
+
+/* In-progress */
+
+.reassessment-progress-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.reassessment-demo-fill-btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.reassessment-progress-label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.reassessment-progress-bar {
+  flex: 1;
+}
+
+.reassessment-question-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.reassessment-question-meta {
+  display: flex;
+  gap: var(--space-5);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.reassessment-question-meta strong {
+  color: var(--color-text-secondary);
+  font-weight: 700;
+}
+
+.reassessment-question-text {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: var(--line-height-normal);
+}
+
+.reassessment-footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+/* Results */
+
+.reassessment-overall-result {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-1);
+}
+
+.reassessment-overall-label {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.reassessment-overall-value {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.reassessment-comparison-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.reassessment-source-note {
+  margin-top: var(--space-3);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+@media (max-width: 640px) {
+  .reassessment-overall-result {
+    align-items: flex-start;
+  }
+
+  .reassessment-footer-nav button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .reassessment-intro-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-1);
+  }
+
+  .reassessment-intro-value {
+    text-align: left;
+  }
+}

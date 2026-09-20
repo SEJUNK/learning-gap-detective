@@ -1,0 +1,57 @@
+.trend-chart {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.trend-chart-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.trend-chart-line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: trend-chart-draw var(--duration-slow) var(--ease-standard) forwards;
+  animation-duration: 900ms;
+}
+
+@keyframes trend-chart-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.trend-chart-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.trend-chart-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
+}
+
+.trend-chart-label-score {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.trend-chart-label-text {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .trend-chart-label-text {
+    display: none;
+  }
+}

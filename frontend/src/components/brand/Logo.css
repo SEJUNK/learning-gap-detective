@@ -1,0 +1,22 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.logo-wordmark {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.logo-wordmark-line {
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+}
+
+.logo-wordmark-accent {
+  color: var(--color-accent);
+}

@@ -1,0 +1,110 @@
+.recovery-path-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.recovery-path-step {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.recovery-path-step-marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.recovery-path-icon-complete {
+  color: var(--color-success);
+}
+
+.recovery-path-icon-pending {
+  color: var(--color-border-strong);
+}
+
+.recovery-path-connector {
+  width: 2px;
+  flex: 1;
+  min-height: 28px;
+  background: var(--color-border);
+  margin: var(--space-1) 0;
+}
+
+.recovery-path-step-body {
+  padding-bottom: var(--space-5);
+  flex: 1;
+}
+
+.recovery-path-step-heading {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-1);
+}
+
+.recovery-path-step-number {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.recovery-path-step-tag {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-full);
+}
+
+.recovery-path-step-title {
+  font-size: var(--font-size-base);
+  margin-bottom: var(--space-1);
+}
+
+.recovery-path-step-duration {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.recovery-path-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  flex-wrap: wrap;
+}
+
+.recovery-path-progress {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.recovery-path-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 40px;
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-accent);
+  color: #fff;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+.recovery-path-cta:hover {
+  background: var(--color-accent-strong);
+}

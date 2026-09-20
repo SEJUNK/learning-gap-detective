@@ -1,0 +1,34 @@
+.activity-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.activity-timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.activity-timeline-icon {
+  color: var(--color-success);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.activity-timeline-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.activity-timeline-description {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.activity-timeline-time {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}

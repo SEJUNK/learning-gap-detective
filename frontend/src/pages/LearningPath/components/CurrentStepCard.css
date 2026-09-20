@@ -1,0 +1,107 @@
+.current-step-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  background: var(--color-accent-soft);
+  border-color: transparent;
+}
+
+.current-step-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.current-step-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.current-step-kicker {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.current-step-title {
+  font-size: var(--font-size-2xl);
+}
+
+.current-step-duration {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.current-step-reason {
+  margin-top: var(--space-2);
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.current-step-reason-label {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.current-step-reason p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-normal);
+}
+
+.current-step-progress {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+.current-step-progress-label {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.current-step-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  height: 48px;
+  padding: 0 var(--space-6);
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--color-accent);
+  color: #fff;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+.current-step-cta:hover {
+  background: var(--color-accent-strong);
+}
+
+@media (max-width: 480px) {
+  .current-step-cta {
+    align-self: stretch;
+  }
+}

@@ -1,0 +1,24 @@
+.logo-mark {
+  position: relative;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.logo-mark-badge {
+  position: absolute;
+  right: -4px;
+  bottom: -4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  color: var(--color-accent);
+  border: 1.5px solid var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}

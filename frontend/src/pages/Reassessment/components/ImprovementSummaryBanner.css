@@ -1,0 +1,43 @@
+.improvement-banner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.improvement-banner-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+/* A subtle, professional entrance — scale only, never opacity, so the
+   icon is never invisible if the animation doesn't run (see the
+   established "motion is never load-bearing" rule). */
+.improvement-banner-icon.celebrate {
+  animation: improvement-celebrate var(--duration-slow) var(--ease-standard);
+}
+
+@keyframes improvement-celebrate {
+  from {
+    transform: scale(0.7) rotate(-8deg);
+  }
+  to {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.improvement-banner-message {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .improvement-banner-message {
+    font-size: var(--font-size-lg);
+  }
+}

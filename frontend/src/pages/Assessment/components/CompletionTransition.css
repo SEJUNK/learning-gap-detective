@@ -1,0 +1,50 @@
+.completion-transition {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  text-align: center;
+  padding: var(--space-6);
+}
+
+.completion-transition-check {
+  color: var(--color-success);
+  animation: completion-check-in var(--duration-slow) var(--ease-standard);
+}
+
+.completion-transition-title {
+  font-size: var(--font-size-2xl);
+}
+
+.completion-transition-subtitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+}
+
+.completion-transition-spinner {
+  color: var(--color-accent);
+  animation: completion-spin 1s linear infinite;
+}
+
+@keyframes completion-check-in {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes completion-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,119 @@
+.assessment-page {
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding-bottom: var(--space-6);
+}
+
+.assessment-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.assessment-title {
+  font-size: var(--font-size-2xl);
+}
+
+.assessment-subtitle {
+  margin-top: var(--space-1);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+.assessment-progress-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.assessment-demo-fill-btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.assessment-progress-label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.assessment-progress-bar {
+  flex: 1;
+}
+
+.assessment-question-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.assessment-question-meta {
+  display: flex;
+  gap: var(--space-5);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.assessment-question-meta strong {
+  color: var(--color-text-secondary);
+  font-weight: 700;
+}
+
+.assessment-question-text {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: var(--line-height-normal);
+  white-space: pre-wrap;
+}
+
+.assessment-footer-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  position: sticky;
+  bottom: var(--space-4);
+  background: var(--color-bg);
+  padding-top: var(--space-2);
+}
+
+@media (max-width: 640px) {
+  .assessment-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .assessment-header button {
+    align-self: flex-start;
+  }
+
+  .assessment-question-text {
+    font-size: var(--font-size-base);
+  }
+
+  .assessment-footer-nav {
+    position: sticky;
+    bottom: calc(var(--bottom-nav-height) + var(--space-3));
+    padding: var(--space-3);
+    margin: 0 calc(var(--space-4) * -1);
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+  }
+
+  .assessment-footer-nav button {
+    flex: 1;
+  }
+}

@@ -1,0 +1,23 @@
+.code-block {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: var(--font-size-sm);
+  line-height: 1.7;
+  overflow-x: auto;
+  color: var(--color-text-primary);
+}
+
+.code-block-line {
+  display: block;
+  white-space: pre;
+}
+
+.code-block-line.highlighted {
+  background: var(--color-accent-soft);
+  margin: 0 calc(var(--space-4) * -1);
+  padding: 0 var(--space-4);
+  border-left: 3px solid var(--color-accent);
+}

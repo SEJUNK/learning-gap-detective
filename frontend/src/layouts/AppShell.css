@@ -1,0 +1,69 @@
+.app-shell-desktop {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Keyboard-only escape hatch past the persistent sidebar/bottom nav — invisible until focused, matching the standard "skip to content" pattern. */
+.skip-to-content-link {
+  position: absolute;
+  top: -48px;
+  left: var(--space-3);
+  z-index: 100;
+  background: var(--color-accent);
+  color: #fff;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  transition: top var(--duration-fast) var(--ease-standard);
+}
+
+.skip-to-content-link:focus {
+  top: var(--space-3);
+}
+
+.app-shell-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.app-content {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--space-7);
+}
+
+.app-shell-mobile {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-content-mobile {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: var(--space-4);
+  padding-bottom: calc(var(--bottom-nav-height) + var(--space-4));
+}
+
+/*
+  Subtle entrance transition. Deliberately animates transform only, never
+  opacity: content must stay visible even if the animation fails to run
+  or tick (backgrounded tab, reduced motion, older browsers) — it should
+  only ever be a polish layer, never load-bearing for visibility.
+*/
+.page-transition {
+  animation: page-transition-in var(--duration-base) var(--ease-standard);
+}
+
+@keyframes page-transition-in {
+  from {
+    transform: translateY(6px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

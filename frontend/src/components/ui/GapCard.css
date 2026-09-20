@@ -1,0 +1,44 @@
+.gap-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+  transition: box-shadow var(--duration-base) var(--ease-standard),
+    transform var(--duration-base) var(--ease-standard);
+}
+
+.gap-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.gap-card-title {
+  font-size: var(--font-size-lg);
+}
+
+.gap-card-mastery {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+}
+
+.gap-card-explanation {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-normal);
+  flex: 1;
+}
+
+.gap-card-action {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: gap var(--duration-fast) var(--ease-standard);
+}
+
+.gap-card-action:hover {
+  gap: var(--space-2);
+}

@@ -1,0 +1,146 @@
+/*
+  Design tokens for Learning Gap Detective.
+  A restrained, premium EdTech palette: deep ink neutrals, a single
+  confident accent (indigo), and a soft warm accent reserved for
+  diagnostic/insight moments. No gradients, no glassmorphism.
+*/
+:root {
+  /* Color: neutrals */
+  --color-bg: #fafafa;
+  --color-surface: #ffffff;
+  --color-surface-raised: #ffffff;
+  --color-border: #e7e5e4;
+  --color-border-strong: #d6d3d1;
+
+  --color-text-primary: #1c1917;
+  --color-text-secondary: #57534e;
+  --color-text-muted: #a8a29e;
+
+  /* Color: brand accent */
+  --color-accent: #4338ca;
+  --color-accent-strong: #372ea8;
+  --color-accent-soft: #eef0fd;
+
+  /* Color: semantic */
+  --color-success: #15803d;
+  --color-success-soft: #ecfdf3;
+  --color-warning: #b45309;
+  --color-warning-soft: #fef6ec;
+  --color-danger: #b91c1c;
+  --color-danger-soft: #fdf0ef;
+
+  /* Typography */
+  --font-sans: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.375rem;
+  --font-size-2xl: 1.75rem;
+  --font-size-3xl: 2.25rem;
+
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 2.5rem;
+  --space-8: 3rem;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-full: 999px;
+
+  /* Shadow: subtle, single-direction, low opacity */
+  --shadow-sm: 0 1px 2px rgba(28, 25, 23, 0.04);
+  --shadow-md: 0 4px 16px rgba(28, 25, 23, 0.06);
+  --shadow-lg: 0 12px 32px rgba(28, 25, 23, 0.08);
+
+  /* Color: learning-gap severity (never used as the sole signal — always
+     paired with an icon + label in components like StatusBadge) */
+  --color-gap-root: #b91c1c;
+  --color-gap-root-soft: #fdf0ef;
+  --color-gap-application: #c2410c;
+  --color-gap-application-soft: #fef1e8;
+  --color-gap-practice: #a16207;
+  --color-gap-practice-soft: #fdf6e3;
+  --color-gap-strength: #15803d;
+  --color-gap-strength-soft: #ecfdf3;
+
+  /* Layout */
+  --sidebar-width: 264px;
+  --sidebar-width-collapsed: 76px;
+  --topnav-height: 64px;
+  --mobile-header-height: 56px;
+  --bottom-nav-height: 68px;
+  --content-max-width: 1160px;
+
+  /* Elevation (stacking order) */
+  --z-dropdown: 20;
+  --z-sticky: 5;
+  --z-overlay: 40;
+  --z-modal: 50;
+  --z-tooltip: 60;
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 320ms;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #121110;
+    --color-surface: #191816;
+    --color-surface-raised: #211f1d;
+    --color-border: #2e2b28;
+    --color-border-strong: #3c3835;
+
+    --color-text-primary: #f5f5f4;
+    --color-text-secondary: #d6d3d1;
+    --color-text-muted: #8a8580;
+
+    --color-accent: #818cf8;
+    --color-accent-strong: #a5b4fc;
+    --color-accent-soft: #23223b;
+
+    --color-success: #4ade80;
+    --color-success-soft: #14261c;
+    --color-warning: #fbbf24;
+    --color-warning-soft: #2a2113;
+    --color-danger: #f87171;
+    --color-danger-soft: #2a1a19;
+
+    --color-gap-root: #f87171;
+    --color-gap-root-soft: #2a1a19;
+    --color-gap-application: #fb923c;
+    --color-gap-application-soft: #2a2013;
+    --color-gap-practice: #fbbf24;
+    --color-gap-practice-soft: #2a2413;
+    --color-gap-strength: #4ade80;
+    --color-gap-strength-soft: #14261c;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.45);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

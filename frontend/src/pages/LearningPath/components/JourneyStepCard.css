@@ -1,0 +1,151 @@
+.journey-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.journey-step-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  transition: box-shadow var(--duration-base) var(--ease-standard),
+    transform var(--duration-base) var(--ease-standard);
+  /* transform-only entrance: content must stay visible even if this
+     animation never ticks (see Phase 1/2's "motion is never
+     load-bearing" rule) — no opacity in the keyframes below. */
+  animation: journey-step-in var(--duration-slow) var(--ease-standard);
+}
+
+.journey-step-card:not(.locked):hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.journey-step-card.locked {
+  background: var(--color-bg);
+  opacity: 0.75;
+}
+
+.journey-step-card.in-progress {
+  box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+.journey-step-card.completed {
+  background: var(--color-success-soft);
+}
+
+.journey-step-top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.journey-step-number {
+  font-size: var(--font-size-xl);
+  font-weight: 800;
+  color: var(--color-text-muted);
+  letter-spacing: -0.02em;
+}
+
+.journey-step-kicker {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.journey-step-status-icon {
+  margin-left: auto;
+  color: var(--color-text-muted);
+}
+
+.journey-step-status-icon.completed {
+  color: var(--color-success);
+}
+
+.journey-step-title {
+  font-size: var(--font-size-xl);
+}
+
+.journey-step-description {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.journey-step-meta {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.journey-step-duration {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.journey-step-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  align-self: flex-start;
+  height: 40px;
+  padding: 0 var(--space-5);
+  margin-top: var(--space-2);
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--color-accent);
+  color: #fff;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+.journey-step-cta:hover {
+  background: var(--color-accent-strong);
+}
+
+.journey-step-locked-note {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.journey-step-connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-2) 0;
+  color: var(--color-border-strong);
+}
+
+.journey-step-connector-line {
+  width: 2px;
+  height: 20px;
+  background: var(--color-border);
+}
+
+.journey-step-connector-arrow {
+  transform: rotate(90deg);
+  margin-top: -4px;
+}
+
+@keyframes journey-step-in {
+  from {
+    transform: translateY(8px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .journey-step-title {
+    font-size: var(--font-size-lg);
+  }
+}

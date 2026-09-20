@@ -1,0 +1,52 @@
+.diagnosis-loading {
+  max-width: 420px;
+  margin: var(--space-8) auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  text-align: center;
+}
+
+.diagnosis-loading-title {
+  font-size: var(--font-size-xl);
+}
+
+.diagnosis-loading-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  align-items: flex-start;
+  width: 100%;
+}
+
+.diagnosis-loading-step {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.diagnosis-loading-step.done {
+  color: var(--color-success);
+}
+
+.diagnosis-loading-step.current {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.diagnosis-loading-spinner {
+  animation: diagnosis-loading-spin 0.9s linear infinite;
+}
+
+@keyframes diagnosis-loading-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

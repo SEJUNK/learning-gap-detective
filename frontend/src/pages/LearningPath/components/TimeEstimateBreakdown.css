@@ -1,0 +1,65 @@
+.time-estimate-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.time-estimate-total {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.time-estimate-total-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.time-estimate-total-value {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+}
+
+.time-estimate-bar {
+  display: flex;
+  height: 10px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.time-estimate-bar-segment {
+  height: 100%;
+  transition: width var(--duration-slow) var(--ease-standard);
+}
+
+.time-estimate-rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.time-estimate-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+}
+
+.time-estimate-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+.time-estimate-row-label {
+  color: var(--color-text-secondary);
+  flex: 1;
+}
+
+.time-estimate-row-value {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}

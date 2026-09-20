@@ -1,0 +1,98 @@
+.answer-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.answer-option {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  width: 100%;
+  min-height: 56px;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-border);
+  background: var(--color-surface);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color var(--duration-fast) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard),
+    transform var(--duration-fast) var(--ease-standard);
+}
+
+.answer-option:hover:not(:disabled) {
+  border-color: var(--color-accent);
+}
+
+.answer-option:active:not(:disabled) {
+  transform: scale(0.995);
+}
+
+.answer-option:disabled {
+  cursor: default;
+}
+
+.answer-option.selected {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+.answer-option.correct {
+  border-color: var(--color-success);
+  background: var(--color-success-soft);
+}
+
+.answer-option.incorrect {
+  border-color: var(--color-danger);
+  background: var(--color-danger-soft);
+}
+
+.answer-option-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-border-strong);
+  background: var(--color-surface);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  transition: border-color var(--duration-fast) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard);
+}
+
+.answer-option.selected .answer-option-letter {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.answer-option.correct .answer-option-letter {
+  border-color: var(--color-success);
+  background: var(--color-success);
+  color: #fff;
+}
+
+.answer-option.incorrect .answer-option-letter {
+  border-color: var(--color-danger);
+  background: var(--color-danger);
+  color: #fff;
+}
+
+.answer-option-text {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-primary);
+  padding-top: 3px;
+}
+
+.answer-option-code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: var(--font-size-sm);
+  white-space: pre-wrap;
+}

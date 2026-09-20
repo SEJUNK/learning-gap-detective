@@ -1,0 +1,21 @@
+.reassessment-submit-copy {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-5);
+}
+
+.reassessment-submit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-3);
+}
+
+@media (max-width: 480px) {
+  .reassessment-submit-actions {
+    flex-direction: column-reverse;
+  }
+
+  .reassessment-submit-actions button {
+    width: 100%;
+  }
+}

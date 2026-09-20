@@ -1,0 +1,58 @@
+# ---- Node / React / Vite (frontend) ----
+node_modules/
+dist/
+dist-ssr/
+*.local
+frontend/dev-dist/
+.vite/
+
+# npm/yarn/pnpm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ---- Python / FastAPI (backend) ----
+venv/
+.venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.sqlite3
+*.db
+
+# ---- Secrets / environment ----
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# ---- Editors / IDEs ----
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Logs / temp ----
+*.log
+logs/
+*.tmp
+tmp/
+
+# ---- Coverage / build artifacts ----
+coverage/
+*.tsbuildinfo
+node_modules/.tmp/

@@ -1,0 +1,63 @@
+.module-progress {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.module-progress-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+.module-progress-item:not(:last-child)::after {
+  content: "";
+  width: 16px;
+  height: 1px;
+  background: var(--color-border);
+  margin-left: var(--space-2);
+}
+
+.module-progress-dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--color-border-strong);
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.module-progress-item.done .module-progress-dot {
+  background: var(--color-success);
+  border-color: var(--color-success);
+}
+
+.module-progress-item.current .module-progress-dot {
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+}
+
+.module-progress-item.current .module-progress-label {
+  color: var(--color-accent);
+}
+
+@media (max-width: 480px) {
+  .module-progress-label {
+    display: none;
+  }
+
+  .module-progress-item.current .module-progress-label {
+    display: inline;
+  }
+
+  .module-progress-item:not(:last-child)::after {
+    width: 8px;
+  }
+}

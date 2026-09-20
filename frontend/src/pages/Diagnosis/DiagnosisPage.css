@@ -1,0 +1,41 @@
+.diagnosis-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  min-width: 0;
+}
+
+.diagnosis-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.diagnosis-other-findings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-4);
+}
+
+.diagnosis-source-note {
+  margin-top: var(--space-3);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+@media (max-width: 1024px) {
+  .diagnosis-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Matches the Dashboard's stat-grid breakpoint exactly — the same "4 stat
+   cards" pattern should collapse at the same width everywhere it appears,
+   and 2-up keeps this summary scannable in one glance instead of forcing
+   four full-width scrolls before reaching the Root Gap panel below it. */
+@media (max-width: 400px) {
+  .diagnosis-summary-grid {
+    grid-template-columns: 1fr;
+  }
+}

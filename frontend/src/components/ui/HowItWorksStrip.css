@@ -1,0 +1,31 @@
+.how-it-works-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-1);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-accent-soft);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-accent-strong);
+  overflow-x: auto;
+}
+
+.how-it-works-step {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  white-space: nowrap;
+}
+
+.how-it-works-arrow {
+  margin-left: var(--space-2);
+  opacity: 0.5;
+}
+
+@media (max-width: 640px) {
+  .how-it-works-strip {
+    flex-wrap: nowrap;
+  }
+}

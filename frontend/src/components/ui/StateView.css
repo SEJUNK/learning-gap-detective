@@ -1,0 +1,50 @@
+.state-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-3);
+  padding: var(--space-8) var(--space-5);
+  color: var(--color-text-secondary);
+}
+
+.state-view-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: var(--color-bg);
+  color: var(--color-text-muted);
+}
+
+.state-view-title {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.state-view-description {
+  font-size: var(--font-size-sm);
+  max-width: 360px;
+}
+
+.state-view-spinner {
+  animation: state-view-spin 0.9s linear infinite;
+  color: var(--color-accent);
+}
+
+.state-view-icon-error {
+  background: var(--color-danger-soft);
+  color: var(--color-danger);
+}
+
+@keyframes state-view-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

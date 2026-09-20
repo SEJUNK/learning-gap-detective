@@ -1,0 +1,211 @@
+.learning-module-page {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  min-width: 0;
+}
+
+.module-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  animation: module-section-in var(--duration-base) var(--ease-standard);
+}
+
+@keyframes module-section-in {
+  from {
+    transform: translateY(6px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.module-heading {
+  font-size: var(--font-size-2xl);
+}
+
+.module-subheading {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin-top: calc(var(--space-5) * -1);
+}
+
+.module-section-label {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.module-body-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-normal);
+}
+
+.module-transition-note {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+/* Why this matters */
+
+.module-why-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.module-why-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  font-size: var(--font-size-sm);
+}
+
+.module-why-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.module-why-value {
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-align: right;
+}
+
+/* Learn */
+
+.module-explanation-card,
+.module-worked-example-card,
+.module-reinforcement-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.module-bullets {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-left: var(--space-5);
+  list-style: disc;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.module-example-explanation {
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-accent-soft);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+}
+
+.module-steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-left: var(--space-5);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.module-reinforcement-card {
+  background: var(--color-accent-soft);
+  border-color: transparent;
+  align-items: flex-start;
+}
+
+/* Completion */
+
+.module-completion-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-4);
+  padding: var(--space-8) var(--space-6);
+}
+
+.module-completion-icon {
+  color: var(--color-accent);
+}
+
+.module-completion-stats {
+  display: flex;
+  gap: var(--space-8);
+  margin-top: var(--space-2);
+}
+
+.module-completion-stats > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  align-items: center;
+}
+
+.module-completion-stat-label {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.module-completion-stat-value {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.module-completion-note {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-style: italic;
+  max-width: 42ch;
+}
+
+.module-completion-actions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--space-2);
+}
+
+@media (max-width: 480px) {
+  .module-why-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-1);
+  }
+
+  .module-why-value {
+    text-align: left;
+  }
+
+  .module-completion-stats {
+    gap: var(--space-6);
+  }
+
+  .module-completion-actions {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  .module-completion-actions button {
+    width: 100%;
+  }
+}

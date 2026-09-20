@@ -1,0 +1,30 @@
+.journey-timeline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+}
+
+.journey-timeline-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+}
+
+.journey-timeline-item.done {
+  color: var(--color-success);
+}
+
+.journey-timeline-item.done span {
+  color: var(--color-text-secondary);
+}
+
+.journey-timeline-item.current {
+  color: var(--color-text-muted);
+}
+
+.journey-timeline-item.current span {
+  color: var(--color-text-primary);
+  font-weight: 700;
+}
